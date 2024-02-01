@@ -2,7 +2,7 @@
 %2345678901234567890123456789012345678901234567890123456789012345678901234567890
 %        1         2         3         4         5         6         7         8
 
-\documentclass[letterpaper, 10 pt, conference]{ieeeconf.cls}  % Comment this line out
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
 % if you need a4paper
 %\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
 % paper
@@ -57,7 +57,33 @@
     \thispagestyle{empty}
     \pagestyle{empty}
 
+
     \section{Excercise 1}
+    For excerise 1 and 3, following functions are implemented.
+
+    \begin{lstlisting}[label={lst:lstlisting}]
+    def sense(x):
+        return x
+
+    def simulate(Δt, x, dx):
+        x += Δt * dx
+        return x
+    \end{lstlisting}
+
+    Control function is implemented as follows.
+
+    \begin{lstlisting}[label={lst:lstlisting1}]
+    import numpy as np
+
+    def control(t, y):
+        ux = -4 * sin(t)
+        uy = 2 * cos(t)
+        return np.array([ux, uy])
+    \end{lstlisting}
+
+    Since the major and minor axis are set to 4m and 2m respectively, we know that the functoin takes the form of $ux = 4 \sin(t)$ and $uy = 2 \cos(t)$.
+    Moreover, since the path is counterclockwise, we adjust the function to $ux = -4 \sin(t)$ and $uy = 2 \cos(t)$.
+
 
     %    \addtolength{\textheight}{-12cm}
 %    \begin{thebibliography}{99}
