@@ -2,7 +2,7 @@
 %2345678901234567890123456789012345678901234567890123456789012345678901234567890
 %        1         2         3         4         5         6         7         8
 
-\documentclass[letterpaper, 10 pt, conference]{ieeeconf.cls}  % Comment this line out
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
 % if you need a4paper
 %\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
 % paper
@@ -45,6 +45,9 @@
     breakatwhitespace=true,
     tabsize=3
 }
+\usepackage{graphicx}
+\usepackage{hyperref}
+\graphicspath{ {images} }
 
 %%%%%%%%%%%%%%%%
 
@@ -57,10 +60,8 @@
     \thispagestyle{empty}
     \pagestyle{empty}
 
-    \section{Excercise 1}
+    \subtitle{\textbf{GitHub Repo:} \url{https://github.com/shunueda/cse360-mobile-robotics}}
 
-    %    \addtolength{\textheight}{-12cm}
-%    \begin{thebibliography}{99}
-%        \bibitem{c1} G. O. Young, ``Synthetic structure of industrial plastics (Book style with paper title and editor),'' in Plastics, 2nd ed. vol. 3, J. Peters, Ed. New York: McGraw-Hill, 1964, pp. 15--64.
-%    \end{thebibliography}
+    \section{Excercise 1}
+    
 \end{document}
